@@ -27,16 +27,16 @@ from userbot.utils import register, errors_handler
 from userbot.utils import admin_cmd
 
 # =================== CONSTANT ===================
-PP_TOO_SMOL = "`The image is too small`"
-PP_ERROR = "`Failure while processing the image`"
-NO_ADMIN = "`I am not an admin nub nibba!`"
-NO_PERM = "`I don't have sufficient permissions! This is so sed. Alexa play Tera Baap Aaya`"
-NO_SQL = "`Running on Non-SQL mode!`"
+PP_TOO_SMOL = "`The Image Is Too Small.`"
+PP_ERROR = "`Failure While Processing The Image.`"
+NO_ADMIN = "`I Am Not An Admin! Sed. Alexa Plays Faded.`"
+NO_PERM = "`I Don't Have Sufficient Permissions! This Is Bery Sed. Alexa Plays Faded.`"
+NO_SQL = "`Running On Non-SQL Mode!`"
 
 CHAT_PP_CHANGED = "`Chat Picture Changed`"
 CHAT_PP_ERROR = "`Some issue with updating the pic,`" \
-                "`maybe coz I'm not an admin,`" \
-                "`or don't have enough rights.`"
+                "`Maybe coz I'm not an admin,`" \
+                "`Or don't have enough rights.`"
 INVALID_MEDIA = "`Invalid Extension`"
 
 BANNED_RIGHTS = ChatBannedRights(
@@ -552,7 +552,7 @@ async def rm_deletedacc(show):
     del_status = "`No deleted accounts found, Group is cleaned as Hell`"
 
     if con != "clean":
-        await show.edit("`Searching for zombie accounts...`")
+        await show.edit("`Searching for Zombie/Deleted Accounts...`")
         async for user in show.client.iter_participants(show.chat_id,
                                                         aggressive=True):
             if user.deleted:
@@ -575,7 +575,7 @@ async def rm_deletedacc(show):
         await show.edit("`I am not an admin here!`")
         return
 
-    await show.edit("`Deleting deleted accounts...\nOh I can do that?!?!`")
+    await show.edit("`Deleting Deleted Accounts...\nOh I Can Do That?!?!`")
     del_u = 0
     del_a = 0
 
@@ -585,7 +585,7 @@ async def rm_deletedacc(show):
                 await show.client(
                     EditBannedRequest(show.chat_id, user.id, BANNED_RIGHTS))
             except ChatAdminRequiredError:
-                await show.edit("`I don't have ban rights in this group`")
+                await show.edit("`I don't have Ban Rights in this group`")
                 return
             except UserAdminInvalidError:
                 del_u -= 1
