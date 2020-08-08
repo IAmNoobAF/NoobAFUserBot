@@ -19,8 +19,8 @@ async def _(event):
    # if input_str == "Read This Telegraph Whole info here":
     await event.edit("Thanks")
     animation_chars = [
-            "Click here to Go to Telegraph",
-            "[Click Here For Guide](https://telegra.ph/FRIDAY-06-15)"
+            "Sorry!!!",
+            "This Is Private."
          ]
             
 
